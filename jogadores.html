@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>PAINEL</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="active"><a href="jogadores.html"><i class="fas fa-users"></i> Jogadores</a></li>
+                <li><a href="partidas.html"><i class="fas fa-gamepad"></i> Partidas</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+                <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar jogador...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Foto do Usuário">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>Lista de Jogadores</h1>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jogador</th>
+                                <th>Time</th>
+                                <th>KDA Geral</th>
+                                <th>Taxa de Vitória</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="player-info">
+                                        <img src="https://i.pravatar.cc/150?img=11" alt="Jogador 1">
+                                        <strong>PlayerOne</strong>
+                                    </div>
+                                </td>
+                                <td>Pro Gamers</td>
+                                <td>4.50</td>
+                                <td>68%</td>
+                                <td><a href="estatisticas.html" class="btn-profile">Ver Detalhes</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="player-info">
+                                        <img src="https://i.pravatar.cc/150?img=12" alt="Jogador 2">
+                                        <strong>NinjaBR</strong>
+                                    </div>
+                                </td>
+                                <td>KaBuM!</td>
+                                <td>4.20</td>
+                                <td>65%</td>
+                                <td><a href="estatisticas.html" class="btn-profile">Ver Detalhes</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="player-info">
+                                        <img src="https://i.pravatar.cc/150?img=15" alt="Jogador 3">
+                                        <strong>FalleNite</strong>
+                                    </div>
+                                </td>
+                                <td>LOUD</td>
+                                <td>3.90</td>
+                                <td>62%</td>
+                                <td><a href="estatisticas.html" class="btn-profile">Ver Detalhes</a></td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

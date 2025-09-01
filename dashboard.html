@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>PAINEL</h3>
+            </div>
+            <ul class="sidebar-menu">
+    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+    <li><a href="jogadores.html"><i class="fas fa-users"></i> Jogadores</a></li>
+    <li><a href="partidas.html"><i class="fas fa-gamepad"></i> Partidas</a></li>
+    <li><a href="#"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+    <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Foto do Usuário">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>Bem-vindo de volta, Admin!</h1>
+                
+                <div class="summary-cards">
+                    <div class="card">
+                        <h4>Total de Jogadores</h4>
+                        <p>128</p>
+                    </div>
+                    <div class="card">
+                        <h4>Partidas Jogadas</h4>
+                        <p>542</p>
+                    </div>
+                    <div class="card">
+                        <h4>Vitórias</h4>
+                        <p>310</p>
+                    </div>
+                    <div class="card">
+                        <h4>Taxa de Vitórias</h4>
+                        <p>57.2%</p>
+                    </div>
+                </div>
+
+                <div class="main-data-section">
+                    <div class="chart-container">
+                        <h3>Desempenho Geral</h3>
+                        <canvas id="desempenhoGeralChart"></canvas>
+                    </div>
+                    <div class="featured-players">
+                        <h3>Jogadores em Destaque</h3>
+                        <ul>
+                            <li>
+                                <div class="player-info">
+                                    <img src="https://i.pravatar.cc/150?img=11" alt="Jogador 1">
+                                    <div>
+                                        <strong>PlayerOne</strong>
+                                        <span>KDA: 4.5</span>
+                                    </div>
+                                </div>
+                                <a href="estatisticas.html" class="btn-profile">Ver Perfil</a>
+                            </li>
+                            <li>
+                                <div class="player-info">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="Jogador 2">
+                                    <div>
+                                        <strong>NinjaBR</strong>
+                                        <span>KDA: 4.2</span>
+                                    </div>
+                                </div>
+                                <a href="estatisticas.html" class="btn-profile">Ver Perfil</a>
+                            </li>
+                            <li>
+                                <div class="player-info">
+                                    <img src="https://i.pravatar.cc/150?img=15" alt="Jogador 3">
+                                    <div>
+                                        <strong>FalleNite</strong>
+                                        <span>KDA: 3.9</span>
+                                    </div>
+                                </div>
+                                <a href="estatisticas.html" class="btn-profile">Ver Perfil</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

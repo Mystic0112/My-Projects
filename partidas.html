@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidas - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>PAINEL</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="jogadores.html"><i class="fas fa-users"></i> Jogadores</a></li>
+                <li class="active"><a href="partidas.html"><i class="fas fa-gamepad"></i> Partidas</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+                <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar partida...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Foto do Usuário">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>Histórico de Partidas</h1>
+                <div class="placeholder-content">
+                    <p>A tabela com o histórico de todas as partidas será exibida aqui.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

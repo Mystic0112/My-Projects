@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h2>CRIAR NOVA CONTA</h2>
+            </div>
+            <form id="create-account-form">
+                <div class="input-group">
+                    <label for="nome">Nome Completo ou Nickname</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome de jogador" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required>
+                </div>
+                 <div class="input-group">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita a senha" required>
+                </div>
+                
+                <button type="submit" class="btn-login">CADASTRAR</button>
+            </form>
+            <div class="create-account">
+                <p>Já tem uma conta? <a href="index.html">Faça Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
+

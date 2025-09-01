@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>PAINEL</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="jogadores.html"><i class="fas fa-users"></i> Jogadores</a></li>
+                <li><a href="partidas.html"><i class="fas fa-gamepad"></i> Partidas</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+                <li class="active"><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Foto do Usuário">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>Configurações</h1>
+                <div class="settings-form">
+                    <div class="input-group">
+                        <label for="nome-usuario">Nome de Usuário</label>
+                        <input type="text" id="nome-usuario" value="Admin">
+                    </div>
+                    <div class="input-group">
+                        <label for="email-usuario">Email</label>
+                        <input type="email" id="email-usuario" value="admin@exemplo.com">
+                    </div>
+                     <div class="input-group">
+                        <label for="senha-atual">Alterar Senha</label>
+                        <input type="password" id="senha-atual" placeholder="Senha Atual">
+                    </div>
+                     <div class="input-group">
+                        <input type="password" id="nova-senha" placeholder="Nova Senha">
+                    </div>
+                    <button class="btn-login">Salvar Alterações</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

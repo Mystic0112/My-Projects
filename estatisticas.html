@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas do Jogador - Painel de E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>PAINEL</h3>
+            </div>
+                <ul class="sidebar-menu">
+    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+    <li><a href="jogadores.html"><i class="fas fa-users"></i> Jogadores</a></li>
+    <li><a href="partidas.html"><i class="fas fa-gamepad"></i> Partidas</a></li>
+    <li><a href="estatisticas.html"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+    <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar jogador...">
+                </div>
+                 <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Foto do Usuário">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="player-profile-header">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Foto do Jogador">
+                    <div class="player-header-info">
+                        <h1>PlayerOne</h1>
+                        <p>Time: Pro Gamers</p>
+                    </div>
+                    <div class="player-header-stats">
+                        <div class="stat">
+                            <span>KDA</span>
+                            <strong>4.50</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Taxa de Vitória</span>
+                            <strong>68%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-section">
+                    <div class="chart-container-small">
+                        <h3>Estatísticas de KDA</h3>
+                        <canvas id="kdaChart"></canvas>
+                    </div>
+                    <div class="chart-container-small">
+                        <h3>Mapas Mais Jogados</h3>
+                        <canvas id="mapasChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="match-history">
+                    <h3>Histórico de Partidas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Resultado</th>
+                                <th>KDA</th>
+                                <th>Mapa</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="vitoria">Vitória</span></td>
+                                <td>15 / 2 / 8</td>
+                                <td>Mirage</td>
+                                <td>30/07/2025</td>
+                            </tr>
+                            <tr>
+                                <td><span class="vitoria">Vitória</span></td>
+                                <td>21 / 5 / 10</td>
+                                <td>Inferno</td>
+                                <td>29/07/2025</td>
+                            </tr>
+                            <tr>
+                                <td><span class="derrota">Derrota</span></td>
+                                <td>10 / 12 / 5</td>
+                                <td>Dust II</td>
+                                <td>29/07/2025</td>
+                            </tr>
+                             <tr>
+                                <td><span class="vitoria">Vitória</span></td>
+                                <td>18 / 4 / 12</td>
+                                <td>Inferno</td>
+                                <td>28/07/2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
