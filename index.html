@@ -3,40 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Painel de E-Sports</title>
+    <title>Buscador de CEP</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="login-body">
+<body>
 
-    <div class="login-container">
-        <div class="login-box">
-            <div class="logo">
-                <h2>NOME DA PLATAFORMA</h2>
+    <div class="container">
+        <h2>Buscador de Endereço por CEP</h2>
+        <input type="text" id="cep" placeholder="Digite o CEP (só números)">
+        <button onclick="buscarCEP()">Buscar Endereço</button>
+        <div id="resultado">
             </div>
-            <form id="login-form">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
-                </div>
-                <div class="options">
-                    <label class="remember-me">
-                        <input type="checkbox" name="lembrar"> Lembrar-me
-                    </label>
-                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
-                </div>
-                <button type="submit" class="btn-login">LOGIN</button>
-            </form>
-            <div class="create-account">
-                <p>Não tem uma conta? <a href="criar-conta.html">Criar conta</a></p>
-            </div>
-        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-

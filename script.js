@@ -1,106 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
+async function buscarCEP() {
+    const cepInput = document.getElementById('cep').value;
+    const resultadoDiv = document.getElementById('resultado');
 
-    // --- LÓGICA DA PÁGINA DE LOGIN ---
-    const loginForm = document.getElementById('login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Impede o envio real do formulário
-            // Simula um login bem-sucedido e redireciona para o dashboard
-            window.location.href = 'dashboard.html';
-        });
-    }
-
-    // --- GRÁFICOS (usando Chart.js) ---
-    // Verifique se os elementos do canvas existem antes de criar os gráficos
+    // limpa tela
+    resultadoDiv.innerHTML = 'Buscando...';
     
-    // Gráfico de Desempenho Geral (Dashboard)
-    const desempenhoGeralChartCtx = document.getElementById('desempenhoGeralChart');
-    if (desempenhoGeralChartCtx) {
-        new Chart(desempenhoGeralChartCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'],
-                datasets: [{
-                    label: 'Taxa de Vitória %',
-                    data: [55, 58, 62, 60, 65, 68, 72],
-                    borderColor: '#5046e5',
-                    backgroundColor: 'rgba(80, 70, 229, 0.1)',
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: false
-                    }
-                }
-            }
-        });
+    // remove oq nao for cep
+    const cepLimpo = cepInput.replace(/\D/g, ''); 
+
+    // verificador dos 8 digitos
+    if (cepLimpo.length !== 8) {
+        resultadoDiv.innerHTML = 'CEP inválido. Por favor, digite 8 números.';
+        return;
     }
 
-    // Gráfico de KDA (Estatísticas)
-    const kdaChartCtx = document.getElementById('kdaChart');
-    if (kdaChartCtx) {
-        new Chart(kdaChartCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Kills', 'Deaths', 'Assists'],
-                datasets: [{
-                    label: 'Média por Partida',
-                    data: [15, 6, 9],
-                    backgroundColor: [
-                        'rgba(0, 255, 171, 0.6)', // Cor para Kills
-                        'rgba(255, 93, 93, 0.6)',   // Cor para Deaths
-                        'rgba(0, 186, 255, 0.6)'    // Cor para Assists
-                    ],
-                    borderColor: [
-                        '#00ffab',
-                        '#ff5d5d',
-                        '#00baff'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
+    const url = `https://viacep.com.br/ws/${cepLimpo}/json/`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.erro) {
+            resultadoDiv.innerHTML = 'CEP não encontrado.';
+        } else {
+            // mostra os dados
+            resultadoDiv.innerHTML = `
+                <p><strong>Logradouro:</strong> ${data.logradouro}</p>
+                <p><strong>Bairro:</strong> ${data.bairro}</p>
+                <p><strong>Cidade:</strong> ${data.localidade}</p>
+                <p><strong>Estado:</strong> ${data.uf}</p>
+            `;
+        }
+    } catch (error) {
+        resultadoDiv.innerHTML = 'Não foi possível buscar o CEP. Tente novamente.';
     }
-
-    // Gráfico de Mapas (Estatísticas)
-    const mapasChartCtx = document.getElementById('mapasChart');
-    if (mapasChartCtx) {
-        new Chart(mapasChartCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Mirage', 'Inferno', 'Dust II', 'Nuke'],
-                datasets: [{
-                    label: 'Partidas Jogadas',
-                    data: [120, 95, 70, 45],
-                    backgroundColor: [
-                        '#5046e5',
-                        '#00baff',
-                        '#ffc107',
-                        '#fd7e14'
-                    ],
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-            }
-        });
-    }
-
-});
-
+}
